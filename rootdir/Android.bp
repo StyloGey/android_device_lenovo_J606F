@@ -3,3 +3,41 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 //
+
+prebuilt_etc {
+    name: "charger_fstab.qti",
+    src: "etc/charger_fstab.qti",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "bin/init.qti.dcvs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "bin/init.qti.early_init.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.j606f.rc",
+    src: "etc/init.j606f.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}

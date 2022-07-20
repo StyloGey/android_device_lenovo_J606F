@@ -81,6 +81,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 KERNEL_SD_LLVM_SUPPORT := true
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware/awinic
+BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += msm_poweroff.download_mode=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -93,9 +94,9 @@ BOARD_SUPER_PARTITION_SIZE := 12884901888
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 110004875264
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_SUPER_PARTITION_GROUPS := lenovo_dynamic_partitions
-BOARD_LENOVO_DYNAMIC_PARTITIONS_SIZE := 6438256640
-BOARD_LENOVO_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
+BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
 BOARD_USES_METADATA_PARTITION := true
@@ -121,7 +122,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 USE_SENSOR_MULTI_HAL := true
 
 # VINTF
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 

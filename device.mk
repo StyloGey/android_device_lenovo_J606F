@@ -46,7 +46,8 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor
+    libcamera2ndk_vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor:64
 
 # Config Store
 PRODUCT_PACKAGES += \
@@ -95,6 +96,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -116,6 +118,13 @@ PRODUCT_PACKAGES += \
     init.qti.early_init.sh \
     init.j606f.rc \
     init.target.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor
 
 # Overlay
 PRODUCT_PACKAGES += \

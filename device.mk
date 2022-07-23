@@ -18,6 +18,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc
 
+# AAPT Characteristics
+PRODUCT_CHARACTERISTICS := tablet
+
 # ANT
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor:64

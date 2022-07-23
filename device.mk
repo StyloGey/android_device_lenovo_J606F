@@ -25,6 +25,9 @@ PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor:64
 
+# APEX
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl:32 \

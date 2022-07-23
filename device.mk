@@ -23,7 +23,7 @@ PRODUCT_CHARACTERISTICS := tablet
 
 # ANT
 PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
+    com.dsi.ant@1.0.vendor:64
 
 # Bluetooth
 PRODUCT_PACKAGES += \

@@ -133,6 +133,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+# Input device configuration
+PRODUCT_PACKAGES += \
+    Vendor_04f3_Product_3164.idc \
+    Vendor_beef_Product_dead.idc
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor

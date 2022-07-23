@@ -20,24 +20,23 @@ PRODUCT_PACKAGES += \
 
 # ANT
 PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
+    com.dsi.ant@1.0.vendor:64
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth@1.0.vendor \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    android.hardware.bluetooth.audio@2.0-impl:32 \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor:32 \
+    android.hardware.bluetooth@1.0.vendor:64 \
+    vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
+    vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
 # Board
 TARGET_BOARD_PLATFORM := bengal
 
 # Boot
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-impl-qti:64 \
+    android.hardware.boot@1.1-impl-qti.recovery:64 \
     android.hardware.boot@1.1-service
 
 PRODUCT_PACKAGES_DEBUG += \

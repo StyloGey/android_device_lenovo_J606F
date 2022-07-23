@@ -86,6 +86,7 @@ BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += msm_poweroff.download_mode=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296

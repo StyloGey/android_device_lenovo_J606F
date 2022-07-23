@@ -33,7 +33,8 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a9
 
 # Audio
-
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_MODULES_OUT)/audio_aw88258_4pa.ko
 
 # AVB
 BOARD_AVB_ENABLE := true

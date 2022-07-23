@@ -8,6 +8,12 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.hdmi_passthrough.enable=false
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2 \

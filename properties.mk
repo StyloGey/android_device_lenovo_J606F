@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.hdmi_passthrough.enable=false
+
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2 \

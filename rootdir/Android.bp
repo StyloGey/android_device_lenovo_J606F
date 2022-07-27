@@ -29,6 +29,13 @@ sh_binary {
 }
 
 prebuilt_etc {
+    name: "init.j606f.camera.rc",
+    src: "etc/init.j606f.camera.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.j606f.rc",
     src: "etc/init.j606f.rc",
     sub_dir: "init",

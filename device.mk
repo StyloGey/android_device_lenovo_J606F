@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qti.dcvs.sh \
     init.qti.early_init.sh \
+    init.j606f.camera.rc \
     init.j606f.rc \
     init.target.rc
 

@@ -108,18 +108,15 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor:64
 
 # GPS
 PRODUCT_PACKAGES += \
 
-# Haptics
-PRODUCT_PACKAGES += \
-
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
-    android.hardware.health@2.1-impl-qti.recovery \
+    android.hardware.health@2.1-impl-qti:64 \
+    android.hardware.health@2.1-impl-qti.recovery:64 \
     android.hardware.health@2.1-service
 
 # Init
@@ -141,7 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
+    android.hardware.keymaster@4.1.vendor:64
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -149,7 +146,7 @@ PRODUCT_COPY_FILES += \
 
 # Neural networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
+    android.hardware.neuralnetworks@1.3.vendor:64
 
 # Overlay
 PRODUCT_PACKAGES += \
@@ -192,7 +189,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
-    libsensorndkbridge
+    libsensorndkbridge:64
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

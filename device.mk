@@ -158,7 +158,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AOSPAJ606FFrameworks \
     J606FFrameworks \
-    J606FSystemUI \
     J606FWifi
 
 # PD

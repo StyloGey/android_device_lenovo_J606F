@@ -14,6 +14,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1
+
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2 \
@@ -21,3 +25,68 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2 \
     ro.hardware.keystore_desede=true
+
+# DPM
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.dpmhalservice.enable=1
+
+# SF
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+
+# MM
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    mmp.enable.3g2=true \
+    persist.mm.enable.prefetch=true
+
+# GLES
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.force_sw_gles=1 \
+    ro.kernel.qemu.gles
+
+# HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hwui.drop_shadow_cache_size=6 \
+    ro.hwui.gradient_cache_size=1 \
+    ro.hwui.layer_cache_size=48 \
+    ro.hwui.path_cache_size=32 \
+    ro.hwui.r_buffer_cache_size=8 \
+    ro.hwui.text_large_cache_height=1024 \
+    ro.hwui.text_large_cache_width=2048 \
+    ro.hwui.text_small_cache_height=1024 \
+    ro.hwui.text_small_cache_width=1024 \
+    ro.hwui.texture_cache_flushrate=0.4 \
+    ro.hwui.texture_cache_size=72
+
+# Time
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
+
+# Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.sensors.debug.ssc_qmi_debug=true \
+    persist.vendor.sensors.hal_trigger_ssr=false \
+    persist.vendor.sensors.enable.rt_task=false \
+    persist.vendor.sensors.support_direct_channel=false \
+    persist.vendor.sensors.enable.bypass_worker=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.radio.multisim.config=ssss \
+    persist.vendor.radio.rat_on=combine
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.sim_slots.count=1 \
+    persist.vendor.radio.poweron_opt=1

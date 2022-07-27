@@ -69,6 +69,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
+    libdisplayconfig.qti.vendor
 
 # DLKM
 KERNEL_MODULES_INSTALL := dlkm
@@ -140,6 +141,10 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
+# Netutils
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor:64
 
 # Neural networks
 PRODUCT_PACKAGES += \

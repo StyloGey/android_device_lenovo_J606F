@@ -115,6 +115,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/android_touch/gesture_control"
 
 # Recovery
+TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_DOWN
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 BOARD_INCLUDE_RECOVERY_DTBO := true
 

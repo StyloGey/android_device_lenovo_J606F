@@ -89,6 +89,9 @@ BOARD_KERNEL_CMDLINE += msm_poweroff.download_mode=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 
+# Location
+LOC_HIDL_VERSION := 4.0
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296

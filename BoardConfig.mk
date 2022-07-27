@@ -128,11 +128,11 @@ USE_SENSOR_MULTI_HAL := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 
-# Wlan
+# Wifi
 BOARD_HAS_QCOM_WLAN := true
 WIFI_DRIVER_BUILT := qca_cld3
 WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_INSTALL_TO_KERNEL_OUT := true
--include device/qcom/wlan/bengal/BoardConfigWlan.mk
+include device/qcom/wlan/bengal/BoardConfigWlan.mk
 
 -include vendor/lenovo/J606F/BoardConfigVendor.mk

@@ -146,10 +146,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
-# Netutils
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor:64
-
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor:64
@@ -183,7 +179,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     media-legacy \
     overlay \
     perf \
-    telephony \
     usb \
     vibrator \
     wlan
@@ -200,14 +195,6 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.3.vendor:64 \
-    android.hardware.radio.deprecated@1.0.vendor:64 \
-    android.hardware.radio@1.6.vendor:64 \
-    android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor:64
 
 # Update engine
 PRODUCT_PACKAGES += \

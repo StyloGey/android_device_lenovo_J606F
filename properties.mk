@@ -26,10 +26,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.options=::v2 \
     ro.hardware.keystore_desede=true
 
-# DPM
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.dpmhalservice.enable=1
-
 # SF
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
@@ -76,17 +72,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sensors.enable.rt_task=false \
     persist.vendor.sensors.support_direct_channel=false \
     persist.vendor.sensors.enable.bypass_worker=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.iwlan_operation_mode=legacy \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.sib16_support=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
-    persist.vendor.radio.procedure_bytes=SKIP \
-    persist.radio.multisim.config=ssss \
-    persist.vendor.radio.rat_on=combine
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.sim_slots.count=1 \
-    persist.vendor.radio.poweron_opt=1

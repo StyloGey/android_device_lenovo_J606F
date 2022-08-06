@@ -164,7 +164,7 @@ PRODUCT_PACKAGES += \
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    $(DEVICE_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Properties
 $(call inherit-product, $(DEVICE_PATH)/properties.mk)

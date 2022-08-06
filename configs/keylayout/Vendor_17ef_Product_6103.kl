@@ -412,7 +412,7 @@ key usage 0x0c0070 BRIGHTNESS_DOWN
 # P11 keyboard
 key 633   LANGUAGE_SWITCH
 key 634   VOICE_ASSIST
-key 635   FULL_SCREEN
+#key 635   FULL_SCREEN
 
 # Joystick and game controller axes.
 # Axes that are not mapped will be assigned generic axis numbers by the input subsystem.

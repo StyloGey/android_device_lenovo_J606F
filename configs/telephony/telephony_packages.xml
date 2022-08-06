@@ -12,4 +12,9 @@
     <packageinfo name="com.android.carrierconfig.gms.overlay" path="/product/overlay/GmsCarrierConfigOverlay.apk" />
     <packageinfo name="com.android.server.telecom.gms.overlay" path="/product/overlay/GmsTelecommOverlay.apk" />
     <packageinfo name="com.android.phone.gms.overlay" path="/product/overlay/GmsTelephonyOverlay.apk" />
+
+    <packageinfo name="com.android.carrierconfig.overlay.common" path="/product/overlay/CarrierConfigResCommon.apk" />
+    <packageinfo name="com.android.cellbroadcastreceiver.overlay.common" path="/product/overlay/CellBroadcastReceiverResCommon.apk" />
+    <packageinfo name="com.android.server.telecom.overlay.common" path="/product/overlay/TelecommResCommon.apk" />
+    <packageinfo name="com.android.phone.overlay.common" path="/product/overlay/TelephonyResCommon.apk" />
 </packageinfos>

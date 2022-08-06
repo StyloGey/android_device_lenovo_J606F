@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+     Copyright (C) 2022 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<packageinfos>
+    <packageinfo name="com.google.android.dialer" path="/product/priv-app/GoogleDialer" />
+    <packageinfo name="com.google.android.apps.messaging" path="/product/app/Messages" />
+    <packageinfo name="com.google.android.ims" path="/product/priv-app/CarrierServices" />
+
+    <packageinfo name="com.android.carrierconfig.gms.overlay" path="/product/overlay/GmsCarrierConfigOverlay.apk" />
+    <packageinfo name="com.android.server.telecom.gms.overlay" path="/product/overlay/GmsTelecommOverlay.apk" />
+    <packageinfo name="com.android.phone.gms.overlay" path="/product/overlay/GmsTelephonyOverlay.apk" />
+</packageinfos>

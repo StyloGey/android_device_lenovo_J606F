@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# Disabled telephony packages
+PRODUCT_PACKAGES += \
+    telephony_packages.xml
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor

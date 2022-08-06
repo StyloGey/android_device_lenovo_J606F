@@ -139,6 +139,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/idc/Vendor_04f3_Product_3164.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_04f3_Product_3164.idc \
     $(DEVICE_PATH)/configs/idc/Vendor_beef_Product_dead.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_beef_Product_dead.idc
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_17ef_Product_6103.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_6103.kl
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor:64

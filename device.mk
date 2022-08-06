@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
 
 # Features
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/features/disabled_features.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/disabled_features.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \

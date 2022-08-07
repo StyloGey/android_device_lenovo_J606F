@@ -6,6 +6,7 @@
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.monitorRotation=true \
     vendor.audio.feature.hdmi_passthrough.enable=false
 
 # Bluetooth

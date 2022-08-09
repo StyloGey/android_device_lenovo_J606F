@@ -69,6 +69,10 @@
         <usecase name="USECASE_INCALL_REC_UPLINK" type="in" id="23" />
         <usecase name="USECASE_INCALL_REC_DOWNLINK" type="in" id="23" />
         <usecase name="USECASE_INCALL_REC_UPLINK_AND_DOWNLINK" type="in" id="23" />
+        <usecase name="USECASE_AUDIO_RECORD" type="in" id="1" />
+        <usecase name="USECASE_AUDIO_RECORD" type="out" id="1" />
+        <usecase name="USECASE_AUDIO_RECORD_BUS" type="in" id="1" />
+        <usecase name="USECASE_AUDIO_RECORD_BUS" type="out" id="1" />
     </pcm_ids>
     <config_params>
         <!-- In the below value string, the value indicates default mono -->

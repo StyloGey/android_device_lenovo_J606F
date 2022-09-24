@@ -18,10 +18,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # AAPT Characteristics
 PRODUCT_CHARACTERISTICS := tablet
 
-# ANT
-PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor:64
-
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -34,13 +30,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     tinymix \
     tinypcminfo
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor:32 \
-    vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
-    vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
 # Board
 TARGET_BOARD_PLATFORM := bengal

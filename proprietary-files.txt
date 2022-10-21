@@ -80,6 +80,7 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/liblistensoundmodel2.so
 
 # Audio FW
+vendor/firmware/asrp_params_melon_aecnr_dual_mic_ga.bin
 vendor/firmware/awinic/aw882xx_acf.bin
 vendor/firmware/awinic/aw882xx_monitor.bin
 vendor/firmware/dbmd8_va_fw.bin

@@ -699,9 +699,13 @@ vendor/etc/init/tloc_daemon.rc
 
 # TS FW
 vendor/firmware/Himax_firmware.bin
+vendor/firmware/Himax_firmware.bin:recovery/root/vendor/firmware/Himax_firmware.bin
 vendor/firmware/Himax_mpfw.bin
+vendor/firmware/Himax_mpfw.bin:recovery/root/vendor/firmware/Himax_mpfw.bin
 vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin
 vendor/firmware/novatek_ts_mp.bin
+vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
 
 # TUI
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti

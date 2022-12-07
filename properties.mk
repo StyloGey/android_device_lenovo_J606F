@@ -6,7 +6,9 @@
 
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.audio.monitorRotation=true \
+    ro.audio.monitorRotation=true
+
+PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.hdmi_passthrough.enable=false
 
 # Bluetooth

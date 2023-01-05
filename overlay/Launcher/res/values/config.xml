@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources>
+    <!-- config used to determine if header protection is supported in AllApps -->
+    <bool name="config_header_protection_supported">false</bool>
+</resources>

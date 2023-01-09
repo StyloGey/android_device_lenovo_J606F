@@ -292,6 +292,9 @@
     <ctl name="MultiMedia2 Mixer SLIM_7_TX" value="0" />
     <!-- Audio DSPG -->
     <ctl name="MultiMedia1 Mixer SEC_MI2S_TX" value="0" />
+    <ctl name="ES7210_Switch" value="Off" />
+    <ctl name="DSPG_mic" value="0" />
+    <ctl name="Usecase Manager" value="0" />
 
     <!-- audio record compress-->
     <ctl name="MultiMedia8 Mixer TX_CDC_DMA_TX_3" value="0" />
@@ -1934,28 +1937,15 @@
     </path>
 
     <path name="audio-record dspg">
-        <ctl name="MultiMedia1 Mixer SEC_MI2S_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record usb-headset-mic">
-        <ctl name="MultiMedia1 Mixer USB_AUDIO_TX" value="1" />
+        <ctl name="MultiMedia2 Mixer SEC_MI2S_TX" value="1" />
     </path>
 
     <path name="audio-record usb-headset-mic">
-        <ctl name="MultiMedia1 Mixer USB_AUDIO_TX" value="1" />
+        <ctl name="MultiMedia2 Mixer USB_AUDIO_TX" value="1" />
     </path>
 
     <path name="audio-record bt-sco">
         <ctl name="MultiMedia2 Mixer SLIM_7_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record bt-sco">
-        <ctl name="MultiMedia1 Mixer SLIM_7_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record bt-sco-wb">
-        <ctl name="BT SampleRate" value="KHZ_16" />
-        <path name="DSPG-record bt-sco" />
     </path>
 
     <path name="audio-record bt-sco-wb">
@@ -1963,15 +1953,8 @@
         <path name="audio-record bt-sco" />
     </path>
 
-    <path name="DSPG-record headset-mic">
-        <ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_4" value="1" />
-    </path>
-
     <path name="audio-record headset-mic">
         <ctl name="MultiMedia2 Mixer TX_CDC_DMA_TX_4" value="1" />
-    </path>
-    <path name="DSPG-record bt-sco-swb">
-        <path name="DSPG-record bt-sco" />
     </path>
 
     <path name="audio-record bt-sco-swb">
@@ -1980,10 +1963,6 @@
 
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia2 Mixer SLIM_8_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record capture-fm">
-        <ctl name="MultiMedia1 Mixer SLIM_8_TX" value="1" />
     </path>
 
     <path name="audio-record-compress">
@@ -2753,14 +2732,6 @@
     <path name="speaker-mic-sbc">
     </path>
 
-    <path name="dspg-mic">
-        <ctl name="DSPG_mic" value="1" />
-        <ctl name="ES7210_Switch" value="On" />
-        <ctl name="SEC_MI2S_TX SampleRate" value="KHZ_16" />
-        <ctl name="SEC_MI2S_TX Format" value="S32_LE" />
-        <ctl name="SEC_MI2S_TX Channels" value="Two" />
-    </path>
-
     <path name="handset">
         <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
 	<ctl name="RX_CDC_DMA_RX_0 Channels" value="One" />
@@ -2996,7 +2967,11 @@
     </path>
 
     <path name="voice-rec-mic">
-        <path name="handset-mic" />
+        <ctl name="DSPG_mic" value="1" />
+        <ctl name="ES7210_Switch" value="On" />
+        <ctl name="SEC_MI2S_TX SampleRate" value="KHZ_16" />
+        <ctl name="SEC_MI2S_TX Format" value="S32_LE" />
+        <ctl name="SEC_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="camcorder-mic">
@@ -3637,33 +3612,6 @@
 
     <path name="hifi-record usb-headset-mic">
         <ctl name="MultiMedia2 Mixer USB_AUDIO_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record dspg">
-        <ctl name="SEC_MI2S_TX SampleRate" value="KHZ_16" />
-        <ctl name="SEC_MI2S_TX Format" value="S32_LE" />
-        <ctl name="SEC_MI2S_TX Channels" value="Two" />
-        <ctl name="MultiMedia1 Mixer SEC_MI2S_TX" value="1" />
-        <ctl name="Usecase Manager" value="401427" />
-    </path>
-
-    <path name="DSPG-record">
-        <ctl name="SEC_MI2S_TX SampleRate" value="KHZ_16" />
-        <ctl name="SEC_MI2S_TX Format" value="S32_LE" />
-        <ctl name="SEC_MI2S_TX Channels" value="Two" />
-        <ctl name="MultiMedia1 Mixer SEC_MI2S_TX" value="1" />
-    </path>
-
-    <path name="DSPG-record-on">
-        <ctl name="Usecase Manager" value="401427" />
-        <ctl name="DSPG_mic" value="1" />
-        <ctl name="ES7210_Switch" value="On" />
-    </path>
-
-    <path name="DSPG-record-off">
-        <ctl name="ES7210_Switch" value="Off" />
-        <ctl name="DSPG_mic" value="0" />
-        <ctl name="Usecase Manager" value="0" />
     </path>
 
     <path name="incall_music_uplink">

@@ -6,7 +6,8 @@
 
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.audio.monitorRotation=true
+    ro.audio.monitorRotation=true \
+    ro.hardware.audio_amplifier=j606f
 
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.hdmi_passthrough.enable=false

@@ -25,6 +25,7 @@ PRODUCT_CHARACTERISTICS := tablet
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Audio
+AUDIO_FEATURE_ENABLED_DLKM := true
 PRODUCT_PACKAGES += \
     audio_amplifier.j606f
 
@@ -68,7 +69,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti.vendor
+    libdisplayconfig.qti
 
 # DLKM
 KERNEL_MODULES_INSTALL := dlkm
@@ -106,6 +107,9 @@ PRODUCT_COPY_FILES += \
 
 # First api level
 PRODUCT_SHIPPING_API_LEVEL := 29
+BOARD_SHIPPING_API_LEVEL := 30
+BOARD_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -125,7 +129,8 @@ PRODUCT_PACKAGES += \
     init.qti.early_init.sh \
     init.j606f.camera.rc \
     init.j606f.rc \
-    init.target.rc
+    init.target.rc \
+    ueventd.j606f.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
@@ -161,6 +166,10 @@ PRODUCT_PACKAGES += \
 # PD
 PRODUCT_PACKAGES += \
     libjson
+
+# Perf
+PRODUCT_PACKAGES += \
+    libdrm.vendor
 
 # Public Libraries
 PRODUCT_COPY_FILES += \

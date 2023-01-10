@@ -48,3 +48,10 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.j606f.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.j606f.rc",
+    device_specific: true,
+}

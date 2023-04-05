@@ -128,7 +128,6 @@ USE_SENSOR_MULTI_HAL := true
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

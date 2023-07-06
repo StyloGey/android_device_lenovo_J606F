@@ -88,9 +88,6 @@ BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware/awinic
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
-# Location
-LOC_HIDL_VERSION := 4.0
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296

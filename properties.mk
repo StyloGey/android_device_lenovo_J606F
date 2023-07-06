@@ -49,7 +49,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # GLES
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.force_sw_gles=1 \
-    ro.kernel.qemu.gles
+    ro.kernel.qemu.gles=0
 
 # HWUI
 PRODUCT_VENDOR_PROPERTIES += \

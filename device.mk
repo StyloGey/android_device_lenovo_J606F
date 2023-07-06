@@ -181,6 +181,7 @@ $(call inherit-product, $(DEVICE_PATH)/properties.mk)
 # QTI components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
+    alarm \
     audio \
     av \
     bt \

@@ -208,6 +208,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \

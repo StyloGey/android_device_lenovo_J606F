@@ -3,9 +3,3 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 //
-
-prebuilt_etc {
-    name: "telephony_packages.xml",
-    src: "telephony/telephony_packages.xml",
-    vendor: true,
-}

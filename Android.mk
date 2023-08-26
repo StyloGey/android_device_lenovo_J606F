@@ -136,4 +136,23 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_MPSS_SYMLINKS) \
     $(RFS_MSM_SLPI_SYMLINKS)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := RemovePackages
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_OVERRIDES_PACKAGES := \
+    GoogleDialer \
+    Messages \
+    CarrierServices \
+    GmsTelecommOverlay \
+    GmsTelephonyOverlay \
+    CarrierConfigResCommon \
+    CellBroadcastReceiverResCommon \
+    TelecommResCommon \
+    TelephonyResCommon
+LOCAL_UNINSTALLABLE_MODULE := true
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_SRC_FILES := /dev/null
+include $(BUILD_PREBUILT)
+
 endif

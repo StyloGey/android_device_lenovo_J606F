@@ -65,7 +65,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Disabled telephony packages
 PRODUCT_PACKAGES += \
-    telephony_packages.xml
+    RemovePackages
 
 # Display
 PRODUCT_PACKAGES += \

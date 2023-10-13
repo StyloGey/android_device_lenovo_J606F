@@ -59,6 +59,9 @@ function blob_fixup() {
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/130A0094AD1640F9/1F2003D5AD1640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
             ;;
+            vendor/lib/mediadrm/libwvdrmengine.so | vendor/lib64/libsnsdiaglog.so | vendor/lib64/libsnsapi.so | vendor/lib64/libwvhidl.so | vendor/lib64/mediadrm/libwvdrmengine.so | vendor/lib64/sensors.ssc.so | vendor/lib64/libssc.so | vendor/bin/sensors.qti)
+            "${PATCHELF}" --remove-needed "libprotobuf-cpp-lite-3.9.1.so" --add-needed "libprotobuf-cpp-full-3.9.1.so" "${2}"
+            ;;
     esac
 }
 

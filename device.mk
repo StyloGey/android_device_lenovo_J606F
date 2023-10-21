@@ -172,7 +172,8 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     libdrm.vendor \
-    msm_irqbalance.conf
+    msm_irqbalance.conf \
+    perfconfigstore.xml
 
 # Public Libraries
 PRODUCT_COPY_FILES += \

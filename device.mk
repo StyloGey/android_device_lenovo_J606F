@@ -128,8 +128,9 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qti.dcvs.sh \
     init.qti.early_init.sh \
-    init.j606f.camera.rc \
     init.j606f.rc \
+    init.j606f.camera.rc \
+    init.j606f.perf.rc \
     init.target.rc \
     ueventd.j606f.rc
 
@@ -170,7 +171,8 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
-    libdrm.vendor
+    libdrm.vendor \
+    msm_irqbalance.conf
 
 # Public Libraries
 PRODUCT_COPY_FILES += \

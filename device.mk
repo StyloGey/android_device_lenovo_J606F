@@ -78,7 +78,7 @@ KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/$(AOSPA_BUILD)/$(KERNEL_MODULES_
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor:64 \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service-lazy.clearkey
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

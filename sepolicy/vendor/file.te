@@ -1,0 +1,2 @@
+# Gestures
+type vendor_proc_gesture, proc_type, fs_type;

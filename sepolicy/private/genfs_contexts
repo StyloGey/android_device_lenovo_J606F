@@ -1,0 +1,2 @@
+# Extcon
+genfscon sysfs /devices/platform/soc/soc:dock_pogo/extcon   u:object_r:sysfs_extcon:s0

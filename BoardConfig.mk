@@ -86,7 +86,6 @@ KERNEL_SD_LLVM_SUPPORT := true
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware/awinic
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
@@ -120,6 +119,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true

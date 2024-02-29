@@ -3,9 +3,3 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 //
-
-prebuilt_etc {
-    name: "msm_irqbalance.conf",
-    src: "perf/msm_irqbalance.conf",
-    vendor: true,
-}

@@ -9,9 +9,3 @@ prebuilt_etc {
     src: "perf/msm_irqbalance.conf",
     vendor: true,
 }
-
-prebuilt_etc {
-    name: "perfconfigstore.xml",
-    src: "perf/perfconfigstore.xml",
-    vendor: true,
-}

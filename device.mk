@@ -221,4 +221,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# WLAN
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/wlan/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
 $(call inherit-product-if-exists, vendor/lenovo/J606F/J606F-vendor.mk)

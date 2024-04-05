@@ -125,7 +125,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 USE_SENSOR_MULTI_HAL := true
 
 # VINTF
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

@@ -76,3 +76,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sensors.enable.rt_task=false \
     persist.vendor.sensors.support_direct_channel=false \
     persist.vendor.sensors.enable.bypass_worker=true
+
+# Settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=true

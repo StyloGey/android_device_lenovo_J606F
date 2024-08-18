@@ -68,6 +68,8 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 # Display
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti
 

@@ -135,8 +135,28 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/Vendor_17ef_Product_6103.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_6103.kl
 
 # Media
+MSM_VIDC_TARGET_LIST := bengal
+
+include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw \
+    libc2dcolorconvert \
+    init.qti.media.sh
+
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
+    libgui_vendor \
+    libstagefright_softomx.vendor \
+    libstagefright_softomx_plugin.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Neural networks
 PRODUCT_PACKAGES += \
@@ -172,7 +192,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     keymaster \
-    media \
     overlay \
     perf \
     qseecomd \

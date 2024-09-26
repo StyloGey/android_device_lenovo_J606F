@@ -46,6 +46,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
+
 # GLES
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.force_sw_gles=1 \

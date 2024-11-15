@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -24,13 +23,47 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+        "device/$VENDOR/$DEVICE",
+        "vendor/qcom/common/system/display",
+        "vendor/qcom/common/vendor/adreno-r",
+        "vendor/qcom/common/vendor/display",
+        "vendor/qcom/common/vendor/display/4.19",
+        "vendor/qcom/common/vendor/gps-legacy",
+        "vendor/qcom/common/vendor/media-legacy",
+EOF
+}
+
+function lib_to_package_fixup_vendor_variants() {
+    if [ "$2" != "vendor" ]; then
+        return 1
+    fi
+
+    case "$1" in
+    vendor.display.color@1* | \
+        vendor.display.postproc@1.0)
+        echo "$1_vendor"
+        ;;
+    *)
+        return 1
+        ;;
+    esac
+}
+
+function lib_to_package_fixup() {
+    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+        lib_to_package_fixup_proto_3_9_1 "$1" ||
+        lib_to_package_fixup_vendor_variants "$@"
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
 write_headers
 
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Finish
 write_footers

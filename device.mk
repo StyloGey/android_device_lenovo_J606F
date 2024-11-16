@@ -112,10 +112,6 @@ PRODUCT_COPY_FILES += \
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor:64
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -137,10 +133,6 @@ PRODUCT_COPY_FILES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/Vendor_17ef_Product_6103.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_17ef_Product_6103.kl
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor:64
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -183,6 +175,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
+    keymaster \
     media \
     overlay \
     perf \

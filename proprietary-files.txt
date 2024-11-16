@@ -331,11 +331,6 @@ vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-
 # GPU FW
 vendor/firmware/a610_zap.b00
 vendor/firmware/a610_zap.b01
@@ -374,13 +369,6 @@ vendor/firmware/ipa_fws.mdt
 
 # IPC Router Security Configuration
 vendor/bin/irsc_util
-
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
 
 # MM OSAL
 vendor/lib/libmmosal.so
@@ -452,7 +440,6 @@ vendor/lib64/libsdmutils.so|d7d7eeadb2d892a1089b4a4472a8ba5a18b5347f
 
 # Securemsm
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libqcbor.so
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh

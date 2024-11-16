@@ -116,15 +116,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor:64
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti:64 \
-    android.hardware.health@2.1-impl-qti.recovery:64 \
-    android.hardware.health@2.1-service
-
 # Init
 PRODUCT_PACKAGES += \
-    charger_fstab.qti \
     fstab.qcom \
     init.qti.dcvs.sh \
     init.qti.early_init.sh \
@@ -186,6 +179,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
+    charging \
     display \
     gps \
     init \

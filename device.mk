@@ -153,10 +153,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# Perf
-PRODUCT_PACKAGES += \
-    libdrm.vendor
-
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -179,6 +175,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     media \
     overlay \
     perf \
+    qseecomd \
     usb \
     vibrator \
     wlan

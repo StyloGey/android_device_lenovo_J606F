@@ -62,7 +62,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Display
-TARGET_SCREEN_DENSITY := 240
+TARGET_SCREEN_DENSITY := 230
 
 # DLKM
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
@@ -86,6 +86,7 @@ KERNEL_SD_LLVM_SUPPORT := true
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware/awinic
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
@@ -113,7 +114,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/android_touch/gesture_control"
 
 # Recovery
-TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_DOWN
+TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 BOARD_INCLUDE_RECOVERY_DTBO := true
 

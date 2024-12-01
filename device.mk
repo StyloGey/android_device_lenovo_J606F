@@ -19,6 +19,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc
 
 # AAPT Characteristics
+PRODUCT_AAPT_CONFIG := xlarge hdpi large normal
+PRODUCT_AAPT_PREBUILT_DPI := hdpi xhdpi mdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_CHARACTERISTICS := tablet
 
 # APEX
@@ -79,7 +82,7 @@ KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/$(AOSPA_BUILD)/$(KERNEL_MODULES_
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3.vendor:64 \
+    android.hardware.drm@1.4.vendor:64 \
     android.hardware.drm-service-lazy.clearkey
 
 # Dynamic partitions
@@ -137,7 +140,7 @@ PRODUCT_COPY_FILES += \
 # Media
 MSM_VIDC_TARGET_LIST := bengal
 
-include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+$(call inherit-product, hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk)
 
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
@@ -167,6 +170,7 @@ PRODUCT_PACKAGES += \
     AOSPAJ606FFrameworks \
     J606FFrameworks \
     J606FLauncher \
+    J606FSystemUI \
     J606FWifi
 
 # PD
@@ -223,6 +227,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Window extensions
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/large_screen_common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # WLAN
 PRODUCT_COPY_FILES += \

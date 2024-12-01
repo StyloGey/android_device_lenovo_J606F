@@ -31,7 +31,7 @@ function vendor_imports() {
         "vendor/qcom/common/vendor/display",
         "vendor/qcom/common/vendor/display/4.19",
         "vendor/qcom/common/vendor/gps-legacy",
-        "vendor/qcom/common/vendor/media-legacy",
+        "vendor/qcom/common/vendor/qseecomd-legacy",
 EOF
 }
 
@@ -64,6 +64,8 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt"
+
+# append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 
 # Finish
 write_footers

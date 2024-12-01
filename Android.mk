@@ -18,13 +18,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     GoogleDialer \
     Messages \
-    CarrierServices \
     GmsTelecommOverlay \
     GmsTelephonyOverlay \
-    CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    TelecommResCommon \
-    TelephonyResCommon
+    CarrierConfigResCommon_Sys \
+    TelecommResCommon_Sys \
+    TelephonyResCommon_Sys
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null

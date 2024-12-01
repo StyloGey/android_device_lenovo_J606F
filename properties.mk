@@ -51,6 +51,19 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+# DPM
+# PRODUCT_VENDOR_PROPERTIES += \
+#     persist.vendor.dpmhalservice.enable=1
+
+# PRODUCT_VENDOR_PROPERTIES += \
+#     drm.service.enabled=true
+
+# PRODUCT_PRODUCT_PROPERTIES += \
+#     persist.sys.fuse.passthrough.enable=true
+
+# PRODUCT_VENDOR_PROPERTIES += \
+#     debug.sf.enable_gl_backpressure=0
+
 # GLES
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.force_sw_gles=1 \
@@ -73,7 +86,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Time
 PRODUCT_VENDOR_PROPERTIES += \
     persist.timed.enable=true
-
+#vendor.display.enable_rounded_corner=1
 # Sensors
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sensors.debug.ssc_qmi_debug=true \
